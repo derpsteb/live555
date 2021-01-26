@@ -82,7 +82,7 @@ int main(int argc, char** argv) {
   // A MPEG-4 video elementary stream:
   {
     char const* streamName = "mpeg4ESVideoTest";
-    char const* inputFileName = "test.m4e";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.m4e";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -96,7 +96,7 @@ int main(int argc, char** argv) {
   // A H.264 video elementary stream:
   {
     char const* streamName = "h264ESVideoTest";
-    char const* inputFileName = "test.264";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.264";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -110,7 +110,7 @@ int main(int argc, char** argv) {
   // A H.265 video elementary stream:
   {
     char const* streamName = "h265ESVideoTest";
-    char const* inputFileName = "test.265";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.265";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -124,7 +124,7 @@ int main(int argc, char** argv) {
   // A MPEG-1 or 2 audio+video program stream:
   {
     char const* streamName = "mpeg1or2AudioVideoTest";
-    char const* inputFileName = "test.mpg";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.mpg";
     // NOTE: This *must* be a Program Stream; not an Elementary Stream
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
@@ -162,7 +162,7 @@ int main(int argc, char** argv) {
   //  see <http://www.live555.com/rtp-mp3/>)
   {
     char const* streamName = "mp3AudioTest";
-    char const* inputFileName = "test.mp3";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.mp3";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -188,7 +188,8 @@ int main(int argc, char** argv) {
   // A WAV audio stream:
   {
     char const* streamName = "wavAudioTest";
-    char const* inputFileName = "test.wav";
+    // need to change this so it runs in FITM
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.wav";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -205,7 +206,7 @@ int main(int argc, char** argv) {
   // An AMR audio stream:
   {
     char const* streamName = "amrAudioTest";
-    char const* inputFileName = "test.amr";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.amr";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -219,7 +220,7 @@ int main(int argc, char** argv) {
   // A 'VOB' file (e.g., from an unencrypted DVD):
   {
     char const* streamName = "vobTest";
-    char const* inputFileName = "test.vob";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.vob";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -236,8 +237,8 @@ int main(int argc, char** argv) {
   // A MPEG-2 Transport Stream:
   {
     char const* streamName = "mpeg2TransportStreamTest";
-    char const* inputFileName = "test.ts";
-    char const* indexFileName = "test.tsx";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.ts";
+    char const* indexFileName = "../tests/targets/live555/testProgs/test.tsx";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -251,7 +252,7 @@ int main(int argc, char** argv) {
   // An AAC audio stream (ADTS-format file):
   {
     char const* streamName = "aacAudioTest";
-    char const* inputFileName = "test.aac";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.aac";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -268,7 +269,7 @@ int main(int argc, char** argv) {
     OutPacketBuffer::maxSize = 2000000;
 
     char const* streamName = "dvVideoTest";
-    char const* inputFileName = "test.dv";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.dv";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -282,7 +283,7 @@ int main(int argc, char** argv) {
   // A AC3 video elementary stream:
   {
     char const* streamName = "ac3AudioTest";
-    char const* inputFileName = "test.ac3";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.ac3";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -298,7 +299,7 @@ int main(int argc, char** argv) {
   // A Matroska ('.mkv') file, with video+audio+subtitle streams:
   {
     char const* streamName = "matroskaFileTest";
-    char const* inputFileName = "test.mkv";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.mkv";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -325,7 +326,7 @@ int main(int argc, char** argv) {
   // (Note: ".webm' files are special types of Matroska files, so we use the same code as the Matroska ('.mkv') file code above.)
   {
     char const* streamName = "webmFileTest";
-    char const* inputFileName = "test.webm";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.webm";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -351,7 +352,7 @@ int main(int argc, char** argv) {
   // An Ogg ('.ogg') file, with video and/or audio streams:
   {
     char const* streamName = "oggFileTest";
-    char const* inputFileName = "test.ogg";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.ogg";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
@@ -378,7 +379,7 @@ int main(int argc, char** argv) {
   // (Note: ".opus' files are special types of Ogg files, so we use the same code as the Ogg ('.ogg') file code above.)
   {
     char const* streamName = "opusFileTest";
-    char const* inputFileName = "test.opus";
+    char const* inputFileName = "../tests/targets/live555/testProgs/test.opus";
     ServerMediaSession* sms
       = ServerMediaSession::createNew(*env, streamName, streamName,
 				      descriptionString);
